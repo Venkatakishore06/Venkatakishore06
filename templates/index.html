@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div align="center" class="container">
+
+    <h1>Login Page</h1>
+
+
+    <form method="post" action="login">
+        {% csrf_token %}
+
+        <input type="text" name="txtemail" placeholder="Username" style="margin-left:13px; margin-top:10px;"><br>
+        <input type="password" name="txtpswd" placeholder="password" style="margin-left:15px; margin-top:10px;"><br>
+
+        <input type="submit" class="txtsubmit" value="login" style="margin-left:-6px; margin-top:10px;"><br>
+        <a href="#" style="margin-left:-6px; margin-top:10px;">Sign up</a>
+
+
+    </form>
+</div>
+</body>
+</html>

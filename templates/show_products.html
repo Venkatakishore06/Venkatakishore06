@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+    <a class="navbar-brand" href="#"><h1>Products</h1></a>
+</nav>
+<div class="row">
+    {% for p in products %}
+    <div class="col">
+
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="{{ p.image }}" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">{{p.Productname}}</h5>
+                <p class="card-text">Rs.{{ p.price }}</p>
+                <p class="card-text">{{ p.Quantity }}</p>
+                <a href="#" class="btn btn-primary">Buy Now</a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
